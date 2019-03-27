@@ -7,7 +7,7 @@ data()
 .then(res=>{
     console.log(res)
 });
-.catdfdsfch()
+.catch()
 
 const reducers = combineReducers({
     courses: CoursesReduces
