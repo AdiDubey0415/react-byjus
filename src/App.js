@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
 import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
 
-import CourseList from './Components/CourseListing';
+
+import CoursesList from './Containers/CoursesListing';
 import Header from './Components/Header';
 
 
@@ -12,16 +12,16 @@ class App extends Component {
     return (
       <div className="App">
           <Header />
-          <CourseList />
+          <CoursesList />
       </div>
     );
   }
 }
 
-const mapStateToProps = (state) => {
-  return {
-    state
-  }
-}
+// const mapStateToProps = (state) => {
+//   return {
+//     state
+//   }
+// }
 
-export default connect(mapStateToProps)(App);
+export default App;
