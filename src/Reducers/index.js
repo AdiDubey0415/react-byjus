@@ -1,11 +1,13 @@
 import { combineReducers } from 'redux';
+import CoursesReduces from './reducer_courses';
 
-const state = () => ({
-    title: 'New project'
-})
+// const state = () => ({
+//     courseList: [{title: 'shri'}],
+//     searchedTerms: [], 
+// })
 
 const reducers = combineReducers({
-    state
+    courses: CoursesReduces
 });
 
 export default reducers;
