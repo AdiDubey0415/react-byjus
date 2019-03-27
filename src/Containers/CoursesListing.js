@@ -4,11 +4,13 @@ import CourseCard from '../Components/CourseCard';
 import { connect } from "react-redux";
 
 class CoursesList extends Component{
+    
     renderList(){
         return this.props.courses.map( (course) => {
-            return <li key={course.title}>{course.title}</li>
+            return <CourseCard key={course.CourseId} course={course}/>
         })
     }
+
     render(){
         return(
             <div className="container">
@@ -19,16 +21,7 @@ class CoursesList extends Component{
                     </div>
                 </div>
                 <div className="row">
-                    <CourseCard />
-                    <CourseCard />
-                    <CourseCard />
-                    <CourseCard />
-                    <CourseCard />
-                    <CourseCard />
-                    <CourseCard />
-                    <CourseCard />
-                    <CourseCard />
-                    <span>{this.renderList()}</span>
+                    {this.renderList()}
                 </div>
             </div>
             

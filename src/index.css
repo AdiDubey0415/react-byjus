@@ -33,5 +33,6 @@ code {
 
 .card:hover{
   box-shadow: 2px 2px 2px 2px #dedee0;
+  cursor: pointer;
 }
 
