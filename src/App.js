@@ -4,7 +4,7 @@ import { bindActionCreators } from "redux";
 
 
 import CoursesList from './Containers/CoursesListing';
-import Header from './Components/Header';
+import Header from './Containers/Header';
 
 
 class App extends Component {

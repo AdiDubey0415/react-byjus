@@ -1,7 +1,16 @@
 import React , {Component } from 'react';
 
-export default class Header extends Component{
+import { connect } from "react-redux";
+
+class Header extends Component{
     render(){
+        console.log(this.props)
+        const datafilter = () =>{
+            let provider = [];
+            this.props.courses.filter((course) => {
+                console.log(course)
+            })
+        }
         return(
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <a className="navbar-brand" href="#">BYJU'S</a>
@@ -54,7 +63,16 @@ export default class Header extends Component{
                     </ul>
                 </div>
                 <input className="form-control mr-sm-12" type="search" placeholder="Search" aria-label="Search" />
+                {datafilter}
             </nav>
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+      courses: state.courses
+    }
+}
+
+export default connect(mapStateToProps)(Header)

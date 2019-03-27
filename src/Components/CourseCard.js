@@ -1,7 +1,6 @@
 import React from 'react';
 
 const CourseCard = (props) => {
-    console.log(props.course)
     return (
         <div className="card col-md-4 m-3">
             <div className="card-body">
